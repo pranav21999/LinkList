@@ -9,6 +9,7 @@ public class LinkList {
 	class Node{
 		Node next;
 		int data;
+
 	
 		//constructor 
 		public Node(int data) {
@@ -17,6 +18,8 @@ public class LinkList {
 			this.data = data;
 		}
 	}
+	public Node tail=null;
+	
 	
 	// uc2 :method to append data(insert at last position)
 	public Node insert(int data) 
@@ -70,10 +73,20 @@ public class LinkList {
 			System.out.println("Stack is empty");
 		}
 		 popData = head.data;
-		 head = head.next;
-		
+		 head = head.next;	
 	 }
 
+	//uc6 method for deleting last element of LinkList 
+	public void popLast() {
+		Node  currNode = head;
+		Node  prevNode = head;
+		while (currNode.next != null) {
+			prevNode = currNode;
+			currNode = currNode.next;
+		}
+		prevNode.next = null;
+	}
+	
 	
 	//method to Display LinkList
 	public void print() 

@@ -11,11 +11,11 @@ public class MainList {
 		linkedList.insert(70);
 		System.out.println("LinkList:");
 		linkedList.print();	
-		linkedList.pop();//pop the first element of the list
-		linkedList.print();	
-		
-		
+		linkedList.popLast();
+		linkedList.print();
 	}	
 }		
 	
+				
+
 				
