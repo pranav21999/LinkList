@@ -1,7 +1,5 @@
 package ds;
 
-import java.util.Scanner;
-
 public class MainList {
 	//main method
 	public static void main(String[] args) {
@@ -13,9 +11,14 @@ public class MainList {
 		linkedList.print();	
 		linkedList.popLast();
 		linkedList.print();
+		int searched=linkedList.search(30);
+		System.out.println(searched);
+
+
+
 	}	
 }		
 	
 				
 
-				
+						
