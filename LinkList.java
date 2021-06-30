@@ -2,12 +2,18 @@ package ds;
 import java.util.LinkedList;
 import ds.LinkList.Node;
 
+package ds;
+import java.util.LinkedList;
+import ds.LinkList.Node;
+
 public class LinkList {
 	//creating head node 
 	Node head;
+
 	class Node{
 		Node next;
 		int data;
+
 		//constructor 
 		public Node(int data) {
 			super();
@@ -16,17 +22,16 @@ public class LinkList {
 		}
 	}
 	//method to insert data in LinkList
-	public Node insert(int data) 
-	{	
+	public Node insert(int data) {
 		 Node newNode = new Node(data);
-		 if (head == null) 
+		 if (head == null)
 		 {
 			 head = newNode;
-		 } 
+		 }
 		 else
 		 {
-			 Node temp = head;				 
-			 while (temp.next != null) 
+			 Node temp = head;
+			 while (temp.next != null)
 			 {
 			 temp = temp.next;
 			 }
@@ -34,9 +39,16 @@ public class LinkList {
 		 }
 		 return newNode;
 	 }
+
+	//method to push(Insertion at head node)
+	public void push(int data) {
+		 Node newNode = new Node(data);
+		 newNode.next = head;
+		 head = newNode;
+	 }
+
 	//method to Display LinkList
-	public void print() 
-	 {			 
+	public void print() {
 		 Node temp = head;
 		 while (temp != null)
 		 {
@@ -45,5 +57,5 @@ public class LinkList {
 		 }
 		 System.out.println();
 	 }
-	
+
 }
