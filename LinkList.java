@@ -9,8 +9,7 @@ public class LinkList {
 	class Node{
 		Node next;
 		int data;
-
-	
+		
 		//constructor 
 		public Node(int data) {
 			super();
@@ -49,7 +48,7 @@ public class LinkList {
 		 head = newNode;
 	 }
 	
-	//uc 4method to insert at particular position or after position
+	//uc 4method to insert at particular position
 	public void addAtIndex(int value, int index) {
 		if (index == 0) {
 			insert(value);
@@ -86,7 +85,7 @@ public class LinkList {
 		}
 		prevNode.next = null;
 	}
-	
+	//search the particular element from LinkList
 	 public int search(int value) 
 	 {
 	 if (head == null) 
@@ -107,7 +106,20 @@ public class LinkList {
 	 }
 	 return index;
 	 }
-
+	 //Delete at particular position
+	 public void popAtIndex(int index) {
+			if (index == 0) {
+				pop();
+			} else {
+				Node prevNode = head;
+				Node  currNode = head;
+				for (int i = 0; i < index; i++) {
+					prevNode = currNode;
+					currNode = currNode.next;
+				}
+				prevNode.next = currNode.next;
+			}
+		}
 	//method to Display LinkList
 	public void print() 
 	 {			 

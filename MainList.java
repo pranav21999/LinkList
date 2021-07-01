@@ -1,19 +1,42 @@
 package ds;
 
+import java.util.Scanner;
+
 public class MainList {
-		//main method
+	//main method
+	public static void main(String[] args) {
 		LinkList linkedList=new LinkList();
+		/*linkedList.insert(56);
+		linkedList.insert(30);
+		linkedList.insert(70);
+		System.out.println("LinkList:");
+		linkedList.print();	
+		linkedList.popLast();
+		linkedList.print();
+		int searched=linkedList.search(30);
+		System.out.println(searched);
+		
+
+
+	}	
+}		
+	*/
+			
 		Scanner sc=new Scanner(System.in);
-		while(true) {
-				
-			System.out.println("Enter your choice\n1)Insert at lastPosition(append)\n"
-					+ "2)Insert at first(push)\n"
-					+ "3)insert at particular index\n"
-					+ "4)Delete at last\n"
-					+ "5)Delete at first\n"
-					+ "6)Print list\n"
-					+ "7)Search element\n");
-			 int choice =sc.nextInt();
+		while(true) {	
+			System.out.println("Enter your choice");
+			System.out.println("1)Insert at lastPosition(append)");
+			System.out.println("2)Insert at first(push)");
+			System.out.println("3)insert at particular index");
+			System.out.println("4)Delete at last");
+			System.out.println("5)Delete at first");
+			System.out.println("6)print list");
+			System.out.println("7)search element");
+			System.out.println("8)Insert after");
+			System.out.println("9)Delete at particular position");
+			System.out.println("10)sort LinkList");
+			System.out.println("11)exit");
+			int choice =sc.nextInt();
 		
 			switch(choice) {
 			case 1:
@@ -70,8 +93,18 @@ public class MainList {
 				linkedList.print();
 				break;
 			
-			
 			case 9:
+				System.out.println("enter the index in which you have to delete element");
+				int deletePosition=sc.nextInt();
+				linkedList.popAtIndex(deletePosition);
+				linkedList.print();
+				break;
+			
+			case 10:
+				linkedList.sort();
+				linkedList.print();
+				break;
+			case 11:
 				System.exit(0);
 		
 			default:
