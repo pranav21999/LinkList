@@ -49,7 +49,7 @@ public class LinkList {
 		 head = newNode;
 	 }
 	
-	//uc 4method to insert at particular position
+	//uc 4method to insert at particular position or after position
 	public void addAtIndex(int value, int index) {
 		if (index == 0) {
 			insert(value);
@@ -86,7 +86,7 @@ public class LinkList {
 		}
 		prevNode.next = null;
 	}
-	//method to search element 
+	
 	 public int search(int value) 
 	 {
 	 if (head == null) 
@@ -108,8 +108,6 @@ public class LinkList {
 	 return index;
 	 }
 
-	
-	
 	//method to Display LinkList
 	public void print() 
 	 {			 
